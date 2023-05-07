@@ -1,7 +1,15 @@
 import React from "react";
-import { TopHeaderStyle, PhoneStyle } from "./styled";
-import { MdPhone, MdShoppingCart, LinkStyle } from "react-icons/md";
+import { MdPhone, MdShoppingCart } from "react-icons/md";
 import Logo from "../../assets/images/Logo.png";
+import {
+  ButtonStyle,
+  LinkStyle,
+  LinkStyle2,
+  LogoStyle,
+  MainHeaderStyle,
+  PhoneStyle,
+  TopHeaderStyle,
+} from "./styled";
 
 function Header() {
   return (
@@ -16,31 +24,31 @@ function Header() {
             (31) 3482-1232
           </LinkStyle>
         </PhoneStyle>
-        <div>Rua Ilacir Pereira Lima, 518</div>
+        <address>Rua Ilacir Pereira Lima, 518</address>
       </TopHeaderStyle>
 
-      <div>
-        <img src={Logo} alt="Logo Spetim"></img>
+      <MainHeaderStyle>
+        <LogoStyle src={Logo} alt="Logo Spetim"></LogoStyle>
         <div>
-          <button>home</button>
-          <button>sobre</button>
-          <button>especiais</button>
-          <button>comdida de buteco </button>
+          <ButtonStyle>HOME</ButtonStyle>
+          <ButtonStyle>SOBRE</ButtonStyle>
+          <ButtonStyle>ESPECIALIDADES</ButtonStyle>
+          <ButtonStyle>COMIDA DI BUTECO</ButtonStyle>
         </div>
+
         <div>
           <div>Pedidos</div>
-          <MdShoppingCart />
           <div>
-            {" "}
-            <a
+            <MdShoppingCart />
+            <LinkStyle2
               href="https://api.whatsapp.com/send?1=pt_BR&phone=3134821232"
               target="_blank"
             >
               (31) 3482-1232
-            </a>
+            </LinkStyle2>
           </div>
         </div>
-      </div>
+      </MainHeaderStyle>
     </div>
   );
 }
